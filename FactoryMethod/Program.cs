@@ -9,10 +9,15 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            SushiStoreBase store = new XunYangSushiStore();
-            store.OrderSushi("tomato");
-            store = new XiAnSushiStore();
-            store.OrderSushi("ham");
+//            SushiStoreBase store = new XunYangSushiStore();
+//            store.OrderSushi("tomato");
+//            store = new XiAnSushiStore();
+//            store.OrderSushi("ham");
+
+            BuildingMaterialsStoreBase buildingMaterialsStore=new CementStore();
+            buildingMaterialsStore.ShowPrice();
+            buildingMaterialsStore=new TimberStore();
+            buildingMaterialsStore.ShowPrice();
             Console.ReadLine();
         }
     }
